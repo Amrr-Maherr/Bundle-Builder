@@ -1,11 +1,17 @@
+import { Toaster } from "react-hot-toast";
 import "./App.css";
-import { Button } from "./components/ui/button";
+import { BundleLayout } from "@/components/layout/BundleLayout";
+import { BuilderSection } from "@/components/layout/BuilderSection";
+import { ReviewPlaceholder } from "@/components/review/ReviewPlaceholder";
 
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <Button className="bg-red-600">test</Button>
+      <BundleLayout
+        builder={<BuilderSection />}
+        sidebar={<ReviewPlaceholder />}
+      />
+      <Toaster position="bottom-center" />
     </>
   );
 }
