@@ -1,0 +1,1487 @@
+{
+  "products": [
+    {
+      "id": "cam-v4",
+      "name": "Wyze Cam v4",
+      "description": "The clearest Wyze Cam ever made.",
+      "image": "image 112.png",
+      "category": "camera",
+      "learnMoreUrl": "#",
+      "minQuantity": 1,
+      "maxQuantity": 5,
+      "variants": [
+        {
+          "id": "cam-v4-white",
+          "name": "White",
+          "price": 35.98,
+          "salePrice": 27.98,
+          "image": "image 112.png",
+          "onSale": true,
+          "discountPercent": 22
+        },
+        {
+          "id": "cam-v4-grey",
+          "name": "Grey",
+          "price": 35.98,
+          "salePrice": 27.98,
+          "image": "image 13.png",
+          "onSale": true,
+          "discountPercent": 22
+        },
+        {
+          "id": "cam-v4-black",
+          "name": "Black",
+          "price": 35.98,
+          "salePrice": 27.98,
+          "image": "image 110.png",
+          "onSale": true,
+          "discountPercent": 22
+        },
+        {
+          "id": "cam-v4-blue",
+          "name": "Blue",
+          "price": 37.98,
+          "salePrice": 29.98,
+          "image": "image 112.png",
+          "onSale": true,
+          "discountPercent": 21
+        },
+        {
+          "id": "cam-v4-kit",
+          "name": "Kit",
+          "price": 45.98,
+          "salePrice": 36.98,
+          "image": "image 13.png",
+          "onSale": true,
+          "discountPercent": 19
+        },
+        {
+          "id": "cam-v4-2pack",
+          "name": "2-Pack",
+          "price": 65.98,
+          "salePrice": 49.98,
+          "image": "image 110.png",
+          "onSale": true,
+          "discountPercent": 24
+        }
+      ]
+    },
+    {
+      "id": "cam-pan",
+      "name": "Wyze Cam Pan v3",
+      "description": "360° pan and 180° tilt security camera.",
+      "image": "image 13.png",
+      "category": "camera",
+      "learnMoreUrl": "#",
+      "minQuantity": 1,
+      "maxQuantity": 5,
+      "variants": [
+        {
+          "id": "cam-pan-white",
+          "name": "White",
+          "price": 39.98,
+          "salePrice": 34.98,
+          "image": "image 112.png",
+          "onSale": true,
+          "discountPercent": 12
+        },
+        {
+          "id": "cam-pan-grey",
+          "name": "Grey",
+          "price": 39.98,
+          "salePrice": 34.98,
+          "image": "image 13.png",
+          "onSale": true,
+          "discountPercent": 12
+        },
+        {
+          "id": "cam-pan-black",
+          "name": "Black",
+          "price": 39.98,
+          "salePrice": 34.98,
+          "image": "image 110.png",
+          "onSale": true,
+          "discountPercent": 12
+        },
+        {
+          "id": "cam-pan-blue",
+          "name": "Blue",
+          "price": 41.98,
+          "salePrice": 36.98,
+          "image": "image 112.png",
+          "onSale": true,
+          "discountPercent": 11
+        },
+        {
+          "id": "cam-pan-kit",
+          "name": "Kit",
+          "price": 49.98,
+          "salePrice": 42.98,
+          "image": "image 13.png",
+          "onSale": true,
+          "discountPercent": 14
+        },
+        {
+          "id": "cam-pan-2pack",
+          "name": "2-Pack",
+          "price": 72.98,
+          "salePrice": 62.98,
+          "image": "image 110.png",
+          "onSale": true,
+          "discountPercent": 13
+        }
+      ]
+    },
+    {
+      "id": "cam-floodlight",
+      "name": "Wyze Cam Floodlight v2",
+      "description": "2K floodlight camera with a 160° wide-angle view for your garage.",
+      "image": "image 112.png",
+      "category": "camera",
+      "learnMoreUrl": "#",
+      "minQuantity": 1,
+      "maxQuantity": 4,
+      "variants": [
+        {
+          "id": "cam-floodlight-white",
+          "name": "White",
+          "price": 89.98,
+          "salePrice": 69.98,
+          "image": "image 112.png",
+          "onSale": true,
+          "discountPercent": 22
+        },
+        {
+          "id": "cam-floodlight-grey",
+          "name": "Grey",
+          "price": 89.98,
+          "salePrice": 69.98,
+          "image": "image 13.png",
+          "onSale": true,
+          "discountPercent": 22
+        },
+        {
+          "id": "cam-floodlight-black",
+          "name": "Black",
+          "price": 89.98,
+          "salePrice": 69.98,
+          "image": "image 110.png",
+          "onSale": true,
+          "discountPercent": 22
+        },
+        {
+          "id": "cam-floodlight-blue",
+          "name": "Blue",
+          "price": 92.98,
+          "salePrice": 72.98,
+          "image": "image 112.png",
+          "onSale": true,
+          "discountPercent": 21
+        },
+        {
+          "id": "cam-floodlight-kit",
+          "name": "Kit",
+          "price": 109.98,
+          "salePrice": 84.98,
+          "image": "image 13.png",
+          "onSale": true,
+          "discountPercent": 22
+        },
+        {
+          "id": "cam-floodlight-2pack",
+          "name": "2-Pack",
+          "price": 162.98,
+          "salePrice": 129.98,
+          "image": "image 110.png",
+          "onSale": true,
+          "discountPercent": 20
+        }
+      ]
+    },
+    {
+      "id": "cam-doorbell",
+      "name": "Wyze Duo Cam Doorbell",
+      "description": "Two cameras. Two views. Double the porch protection.",
+      "image": "image 110.png",
+      "category": "doorbell",
+      "learnMoreUrl": "#",
+      "minQuantity": 1,
+      "maxQuantity": 3,
+      "variants": [
+        {
+          "id": "cam-doorbell-standard",
+          "name": "Standard",
+          "price": 69.98,
+          "salePrice": null,
+          "image": "image 110.png",
+          "onSale": false,
+          "discountPercent": 0
+        },
+        {
+          "id": "cam-doorbell-pro",
+          "name": "Pro",
+          "price": 89.98,
+          "salePrice": 74.98,
+          "image": "image 112.png",
+          "onSale": true,
+          "discountPercent": 16
+        },
+        {
+          "id": "cam-doorbell-premium",
+          "name": "Premium",
+          "price": 119.98,
+          "salePrice": 99.98,
+          "image": "image 13.png",
+          "onSale": true,
+          "discountPercent": 16
+        },
+        {
+          "id": "cam-doorbell-elite",
+          "name": "Elite",
+          "price": 149.98,
+          "salePrice": 124.98,
+          "image": "image 112.png",
+          "onSale": true,
+          "discountPercent": 16
+        },
+        {
+          "id": "cam-doorbell-kit",
+          "name": "Kit",
+          "price": 89.98,
+          "salePrice": 74.98,
+          "image": "image 13.png",
+          "onSale": true,
+          "discountPercent": 16
+        },
+        {
+          "id": "cam-doorbell-2pack",
+          "name": "2-Pack",
+          "price": 129.98,
+          "salePrice": 109.98,
+          "image": "image 110.png",
+          "onSale": true,
+          "discountPercent": 15
+        }
+      ]
+    },
+    {
+      "id": "cam-battery",
+      "name": "Wyze Battery Cam Pro",
+      "description": "Protect anywhere. See everything in 2.5K HDR. No power outlet or electrician needed.",
+      "image": "image 112.png",
+      "category": "camera",
+      "learnMoreUrl": "#",
+      "minQuantity": 1,
+      "maxQuantity": 5,
+      "variants": [
+        {
+          "id": "cam-battery-white",
+          "name": "White",
+          "price": 89.98,
+          "salePrice": null,
+          "image": "image 112.png",
+          "onSale": false,
+          "discountPercent": 0
+        },
+        {
+          "id": "cam-battery-grey",
+          "name": "Grey",
+          "price": 89.98,
+          "salePrice": null,
+          "image": "image 13.png",
+          "onSale": false,
+          "discountPercent": 0
+        },
+        {
+          "id": "cam-battery-black",
+          "name": "Black",
+          "price": 89.98,
+          "salePrice": null,
+          "image": "image 110.png",
+          "onSale": false,
+          "discountPercent": 0
+        },
+        {
+          "id": "cam-battery-blue",
+          "name": "Blue",
+          "price": 92.98,
+          "salePrice": null,
+          "image": "image 112.png",
+          "onSale": false,
+          "discountPercent": 0
+        },
+        {
+          "id": "cam-battery-kit",
+          "name": "Kit",
+          "price": 109.98,
+          "salePrice": 89.98,
+          "image": "image 13.png",
+          "onSale": true,
+          "discountPercent": 18
+        },
+        {
+          "id": "cam-battery-2pack",
+          "name": "2-Pack",
+          "price": 169.98,
+          "salePrice": 149.98,
+          "image": "image 110.png",
+          "onSale": true,
+          "discountPercent": 11
+        }
+      ]
+    },
+    {
+      "id": "plan-plus",
+      "name": "Cam Plus",
+      "description": "AI detection and 14-day event history for every camera.",
+      "image": "Layer_1.png",
+      "category": "plan",
+      "learnMoreUrl": "#",
+      "minQuantity": 1,
+      "maxQuantity": 1,
+      "variants": [
+        {
+          "id": "plan-plus-standard",
+          "name": "Standard",
+          "price": 19.99,
+          "salePrice": 14.99,
+          "onSale": true,
+          "discountPercent": 25
+        }
+      ]
+    },
+    {
+      "id": "plan-plus-pro",
+      "name": "Cam Plus Pro",
+      "description": "24/7 professional monitoring with instant emergency dispatch.",
+      "image": "Layer_1.png",
+      "category": "plan",
+      "learnMoreUrl": "#",
+      "minQuantity": 1,
+      "maxQuantity": 1,
+      "variants": [
+        {
+          "id": "plan-plus-pro-standard",
+          "name": "Standard",
+          "price": 99.99,
+          "salePrice": 79.99,
+          "onSale": true,
+          "discountPercent": 20
+        }
+      ]
+    },
+    {
+      "id": "plan-unlimited",
+      "name": "Cam Unlimited",
+      "description": "Unlimited cameras on one simple annual plan.",
+      "image": "Layer_1.png",
+      "category": "plan",
+      "learnMoreUrl": "#",
+      "minQuantity": 1,
+      "maxQuantity": 1,
+      "variants": [
+        {
+          "id": "plan-unlimited-standard",
+          "name": "Standard",
+          "price": 199.99,
+          "salePrice": 149.99,
+          "onSale": true,
+          "discountPercent": 25
+        }
+      ]
+    },
+    {
+      "id": "sensor-motion",
+      "name": "Wyze Sense Motion Sensor",
+      "description": "Detects motion up to 26 feet away and triggers alerts.",
+      "image": "image 112.png",
+      "category": "sensor",
+      "learnMoreUrl": "#",
+      "minQuantity": 1,
+      "maxQuantity": 6,
+      "variants": [
+        {
+          "id": "sensor-motion-standard",
+          "name": "Standard",
+          "price": 29.99,
+          "salePrice": 24.99,
+          "onSale": true,
+          "discountPercent": 16
+        }
+      ]
+    },
+    {
+      "id": "sensor-hub",
+      "name": "Wyze Sense Hub",
+      "description": "The brain of your Wyze security system with 24/7 backup.",
+      "image": "image 110.png",
+      "category": "sensor",
+      "learnMoreUrl": "#",
+      "minQuantity": 1,
+      "maxQuantity": 3,
+      "variants": [
+        {
+          "id": "sensor-hub-standard",
+          "name": "Standard",
+          "price": 49.99,
+          "salePrice": 39.99,
+          "onSale": true,
+          "discountPercent": 20
+        }
+      ]
+    },
+    {
+      "id": "sensor-entry",
+      "name": "Wyze Entry Sensor",
+      "description": "Know the moment doors and windows open or close.",
+      "image": "image 112.png",
+      "category": "sensor",
+      "learnMoreUrl": "#",
+      "minQuantity": 1,
+      "maxQuantity": 8,
+      "variants": [
+        {
+          "id": "sensor-entry-standard",
+          "name": "Standard",
+          "price": 19.99,
+          "salePrice": null,
+          "onSale": false,
+          "discountPercent": 0
+        }
+      ]
+    },
+    {
+      "id": "sensor-keypad",
+      "name": "Wyze Sense Keypad",
+      "description": "Arm and disarm your system with a quick passcode.",
+      "image": "image 13.png",
+      "category": "sensor",
+      "learnMoreUrl": "#",
+      "minQuantity": 1,
+      "maxQuantity": 2,
+      "variants": [
+        {
+          "id": "sensor-keypad-standard",
+          "name": "Standard",
+          "price": 24.99,
+          "salePrice": null,
+          "onSale": false,
+          "discountPercent": 0
+        }
+      ]
+    },
+    {
+      "id": "extra-microsd",
+      "name": "Wyze MicroSD Card (256GB)",
+      "description": "Local storage for continuous 24/7 recording.",
+      "image": "image 110.png",
+      "category": "protection",
+      "learnMoreUrl": "#",
+      "minQuantity": 1,
+      "maxQuantity": 6,
+      "variants": [
+        {
+          "id": "extra-microsd-standard",
+          "name": "256GB",
+          "price": 35.99,
+          "salePrice": 29.99,
+          "onSale": true,
+          "discountPercent": 16
+        }
+      ]
+    },
+    {
+      "id": "extra-solar",
+      "name": "Wyze Solar Panel",
+      "description": "Keep your battery cameras charged with continuous solar power.",
+      "image": "image 112.png",
+      "category": "protection",
+      "learnMoreUrl": "#",
+      "minQuantity": 1,
+      "maxQuantity": 4,
+      "variants": [
+        {
+          "id": "extra-solar-standard",
+          "name": "Standard",
+          "price": 29.99,
+          "salePrice": null,
+          "onSale": false,
+          "discountPercent": 0
+        }
+      ]
+    },
+    {
+      "id": "extra-lockbox",
+      "name": "Wyze Lockbox",
+      "description": "Weatherproof storage to keep a spare key secure.",
+      "image": "image 13.png",
+      "category": "protection",
+      "learnMoreUrl": "#",
+      "minQuantity": 1,
+      "maxQuantity": 3,
+      "variants": [
+        {
+          "id": "extra-lockbox-standard",
+          "name": "Standard",
+          "price": 39.99,
+          "salePrice": 34.99,
+          "onSale": true,
+          "discountPercent": 12
+        }
+      ]
+    }
+  ],
+  "bundle": {
+    "items": [
+      {
+        "productId": "sensor-hub",
+        "variantId": "sensor-hub-standard",
+        "quantity": 1
+      },
+      {
+        "productId": "sensor-entry",
+        "variantId": "sensor-entry-standard",
+        "quantity": 1
+      },
+      {
+        "productId": "sensor-motion",
+        "variantId": "sensor-motion-standard",
+        "quantity": 1
+      },
+      {
+        "productId": "sensor-keypad",
+        "variantId": "sensor-keypad-standard",
+        "quantity": 1
+      },
+      {
+        "productId": "cam-floodlight",
+        "variantId": "cam-floodlight-grey",
+        "quantity": 4
+      },
+      {
+        "productId": "cam-pan",
+        "variantId": "cam-pan-grey",
+        "quantity": 1
+      }
+    ],
+    "currentStep": 3
+  },
+  "submissions": [
+    {
+      "items": [
+        {
+          "productId": "cam-og",
+          "variantId": "cam-og-white",
+          "quantity": 6
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-black",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-blue",
+          "quantity": 1
+        }
+      ],
+      "submittedAt": "2026-07-04T20:06:37.648Z",
+      "id": "877FJgPf8gQ"
+    },
+    {
+      "items": [
+        {
+          "productId": "cam-og",
+          "variantId": "cam-og-white",
+          "quantity": 6
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-black",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-blue",
+          "quantity": 1
+        }
+      ],
+      "submittedAt": "2026-07-04T20:06:41.551Z",
+      "id": "Su4U-5vV94A"
+    },
+    {
+      "items": [
+        {
+          "productId": "cam-og",
+          "variantId": "cam-og-white",
+          "quantity": 6
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-v4",
+          "variantId": "cam-v4-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-battery",
+          "variantId": "cam-battery-black",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-doorbell",
+          "variantId": "cam-doorbell-premium",
+          "quantity": 1
+        }
+      ],
+      "submittedAt": "2026-07-04T20:07:56.460Z",
+      "id": "Th1NkzNWcUY"
+    },
+    {
+      "items": [
+        {
+          "productId": "cam-og",
+          "variantId": "cam-og-white",
+          "quantity": 6
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-grey",
+          "quantity": 3
+        },
+        {
+          "productId": "cam-v4",
+          "variantId": "cam-v4-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-battery",
+          "variantId": "cam-battery-black",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-doorbell",
+          "variantId": "cam-doorbell-premium",
+          "quantity": 1
+        },
+        {
+          "productId": "plan-plus-pro",
+          "variantId": "plan-plus-pro-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "plan-unlimited",
+          "variantId": "plan-unlimited-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "plan-plus",
+          "variantId": "plan-plus-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-motion",
+          "variantId": "sensor-motion-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-hub",
+          "variantId": "sensor-hub-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-entry",
+          "variantId": "sensor-entry-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-keypad",
+          "variantId": "sensor-keypad-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "extra-microsd",
+          "variantId": "extra-microsd-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "extra-solar",
+          "variantId": "extra-solar-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "extra-lockbox",
+          "variantId": "extra-lockbox-standard",
+          "quantity": 1
+        }
+      ],
+      "submittedAt": "2026-07-04T20:09:13.747Z",
+      "id": "s_0IUfxi3ow"
+    },
+    {
+      "items": [
+        {
+          "productId": "cam-og",
+          "variantId": "cam-og-white",
+          "quantity": 6
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-grey",
+          "quantity": 2
+        },
+        {
+          "productId": "cam-v4",
+          "variantId": "cam-v4-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-battery",
+          "variantId": "cam-battery-black",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-doorbell",
+          "variantId": "cam-doorbell-premium",
+          "quantity": 1
+        },
+        {
+          "productId": "plan-plus-pro",
+          "variantId": "plan-plus-pro-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "plan-unlimited",
+          "variantId": "plan-unlimited-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "plan-plus",
+          "variantId": "plan-plus-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-motion",
+          "variantId": "sensor-motion-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-hub",
+          "variantId": "sensor-hub-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-entry",
+          "variantId": "sensor-entry-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-keypad",
+          "variantId": "sensor-keypad-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "extra-microsd",
+          "variantId": "extra-microsd-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "extra-solar",
+          "variantId": "extra-solar-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "extra-lockbox",
+          "variantId": "extra-lockbox-standard",
+          "quantity": 1
+        }
+      ],
+      "submittedAt": "2026-07-04T20:10:50.248Z",
+      "id": "Ox7j3F1xVDE"
+    },
+    {
+      "items": [
+        {
+          "productId": "cam-og",
+          "variantId": "cam-og-white",
+          "quantity": 6
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-v4",
+          "variantId": "cam-v4-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-battery",
+          "variantId": "cam-battery-black",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-doorbell",
+          "variantId": "cam-doorbell-premium",
+          "quantity": 1
+        },
+        {
+          "productId": "plan-plus-pro",
+          "variantId": "plan-plus-pro-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "plan-unlimited",
+          "variantId": "plan-unlimited-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "plan-plus",
+          "variantId": "plan-plus-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-motion",
+          "variantId": "sensor-motion-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-hub",
+          "variantId": "sensor-hub-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-entry",
+          "variantId": "sensor-entry-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-keypad",
+          "variantId": "sensor-keypad-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "extra-microsd",
+          "variantId": "extra-microsd-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "extra-solar",
+          "variantId": "extra-solar-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "extra-lockbox",
+          "variantId": "extra-lockbox-standard",
+          "quantity": 1
+        }
+      ],
+      "submittedAt": "2026-07-04T20:10:54.875Z",
+      "id": "weBqMIQ9nAw"
+    },
+    {
+      "items": [
+        {
+          "productId": "cam-og",
+          "variantId": "cam-og-white",
+          "quantity": 6
+        },
+        {
+          "productId": "plan-plus",
+          "variantId": "plan-plus-standard",
+          "quantity": 1
+        }
+      ],
+      "submittedAt": "2026-07-04T20:11:16.129Z",
+      "id": "cyRRyWsK5Wk"
+    },
+    {
+      "items": [
+        {
+          "productId": "cam-og",
+          "variantId": "cam-og-white",
+          "quantity": 6
+        }
+      ],
+      "submittedAt": "2026-07-04T20:11:23.380Z",
+      "id": "yeNTtFa24_w"
+    },
+    {
+      "items": [
+        {
+          "productId": "cam-og",
+          "variantId": "cam-og-white",
+          "quantity": 6
+        }
+      ],
+      "submittedAt": "2026-07-04T20:11:30.407Z",
+      "id": "8CV_4aRCBnI"
+    },
+    {
+      "items": [
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-white",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-v4",
+          "variantId": "cam-v4-grey",
+          "quantity": 1
+        }
+      ],
+      "submittedAt": "2026-07-04T20:15:35.433Z",
+      "id": "t92yLLEZo_w"
+    },
+    {
+      "items": [],
+      "submittedAt": "2026-07-04T20:16:59.326Z",
+      "id": "VMVWGEoEaWE"
+    },
+    {
+      "items": [
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-black",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-grey",
+          "quantity": 1
+        }
+      ],
+      "submittedAt": "2026-07-04T20:18:00.929Z",
+      "id": "r6IwHm-fBUU"
+    },
+    {
+      "items": [
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-v4",
+          "variantId": "cam-v4-kit",
+          "quantity": 1
+        }
+      ],
+      "submittedAt": "2026-07-04T20:20:38.976Z",
+      "id": "LNtZFMhYXvs"
+    },
+    {
+      "items": [
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-v4",
+          "variantId": "cam-v4-kit",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-black",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-2pack",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-kit",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-blue",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-white",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-2pack",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-v4",
+          "variantId": "cam-v4-2pack",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-doorbell",
+          "variantId": "cam-doorbell-2pack",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-battery",
+          "variantId": "cam-battery-kit",
+          "quantity": 1
+        },
+        {
+          "productId": "plan-plus-pro",
+          "variantId": "plan-plus-pro-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "plan-plus",
+          "variantId": "plan-plus-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "plan-unlimited",
+          "variantId": "plan-unlimited-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-keypad",
+          "variantId": "sensor-keypad-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-motion",
+          "variantId": "sensor-motion-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-hub",
+          "variantId": "sensor-hub-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-entry",
+          "variantId": "sensor-entry-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "extra-microsd",
+          "variantId": "extra-microsd-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "extra-solar",
+          "variantId": "extra-solar-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "extra-lockbox",
+          "variantId": "extra-lockbox-standard",
+          "quantity": 1
+        }
+      ],
+      "submittedAt": "2026-07-04T20:26:42.434Z",
+      "id": "yw_jAVg6u4E"
+    },
+    {
+      "items": [
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-v4",
+          "variantId": "cam-v4-kit",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-2pack",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-kit",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-blue",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-white",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-v4",
+          "variantId": "cam-v4-2pack",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-doorbell",
+          "variantId": "cam-doorbell-2pack",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-battery",
+          "variantId": "cam-battery-kit",
+          "quantity": 1
+        },
+        {
+          "productId": "plan-plus-pro",
+          "variantId": "plan-plus-pro-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "plan-plus",
+          "variantId": "plan-plus-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "plan-unlimited",
+          "variantId": "plan-unlimited-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-keypad",
+          "variantId": "sensor-keypad-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-motion",
+          "variantId": "sensor-motion-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-hub",
+          "variantId": "sensor-hub-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-entry",
+          "variantId": "sensor-entry-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "extra-microsd",
+          "variantId": "extra-microsd-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "extra-solar",
+          "variantId": "extra-solar-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "extra-lockbox",
+          "variantId": "extra-lockbox-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-black",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-kit",
+          "quantity": 5
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-white",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-battery",
+          "variantId": "cam-battery-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-battery",
+          "variantId": "cam-battery-white",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-grey",
+          "quantity": 1
+        }
+      ],
+      "submittedAt": "2026-07-04T20:31:35.266Z",
+      "id": "Iy59eVXlXN4"
+    },
+    {
+      "items": [
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-v4",
+          "variantId": "cam-v4-kit",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-2pack",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-kit",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-blue",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-white",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-v4",
+          "variantId": "cam-v4-2pack",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-doorbell",
+          "variantId": "cam-doorbell-2pack",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-battery",
+          "variantId": "cam-battery-kit",
+          "quantity": 1
+        },
+        {
+          "productId": "plan-plus-pro",
+          "variantId": "plan-plus-pro-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "plan-unlimited",
+          "variantId": "plan-unlimited-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-keypad",
+          "variantId": "sensor-keypad-standard",
+          "quantity": 2
+        },
+        {
+          "productId": "sensor-motion",
+          "variantId": "sensor-motion-standard",
+          "quantity": 6
+        },
+        {
+          "productId": "sensor-hub",
+          "variantId": "sensor-hub-standard",
+          "quantity": 3
+        },
+        {
+          "productId": "extra-microsd",
+          "variantId": "extra-microsd-standard",
+          "quantity": 6
+        },
+        {
+          "productId": "extra-solar",
+          "variantId": "extra-solar-standard",
+          "quantity": 4
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-black",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-kit",
+          "quantity": 5
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-white",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-battery",
+          "variantId": "cam-battery-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-battery",
+          "variantId": "cam-battery-white",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "plan-plus",
+          "variantId": "plan-plus-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-entry",
+          "variantId": "sensor-entry-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "extra-lockbox",
+          "variantId": "extra-lockbox-standard",
+          "quantity": 1
+        }
+      ],
+      "submittedAt": "2026-07-04T20:32:08.461Z",
+      "id": "unU3JfVe_Mk"
+    },
+    {
+      "items": [],
+      "submittedAt": "2026-07-04T20:32:43.338Z",
+      "id": "fAmMwE0M7uE"
+    },
+    {
+      "items": [
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-black",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-v4",
+          "variantId": "cam-v4-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-v4",
+          "variantId": "cam-v4-black",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-grey",
+          "quantity": 1
+        }
+      ],
+      "submittedAt": "2026-07-04T20:36:55.913Z",
+      "id": "IlXADdg8nXU"
+    },
+    {
+      "items": [
+        {
+          "productId": "sensor-hub",
+          "variantId": "sensor-hub-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-entry",
+          "variantId": "sensor-entry-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-motion",
+          "variantId": "sensor-motion-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-keypad",
+          "variantId": "sensor-keypad-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-grey",
+          "quantity": 4
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-grey",
+          "quantity": 1
+        }
+      ],
+      "submittedAt": "2026-07-04T20:57:16.204Z",
+      "id": "ZqjKCw8iJHc"
+    }
+  ],
+  "summary": {
+    "groups": [
+      {
+        "id": "cameras",
+        "title": "Cameras",
+        "categories": [
+          "camera",
+          "doorbell"
+        ]
+      },
+      {
+        "id": "sensors",
+        "title": "Sensors",
+        "categories": [
+          "sensor"
+        ]
+      },
+      {
+        "id": "accessories",
+        "title": "Accessories",
+        "categories": [
+          "protection"
+        ]
+      },
+      {
+        "id": "plan",
+        "title": "Plan",
+        "categories": [
+          "plan"
+        ]
+      }
+    ]
+  },
+  "$schema": "./node_modules/json-server/schema.json"
+}
