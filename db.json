@@ -397,46 +397,16 @@
     }
   ],
   "bundle": {
-    "items": [
-      {
-        "productId": "cam-battery",
-        "variantId": "cam-battery-white",
-        "quantity": 1
-      },
-      {
-        "productId": "sensor-motion",
-        "variantId": "sensor-motion-standard",
-        "quantity": 1
-      },
-      {
-        "productId": "sensor-hub",
-        "variantId": "sensor-hub-standard",
-        "quantity": 1
-      },
-      {
-        "productId": "cam-pan",
-        "variantId": "cam-pan-grey",
-        "quantity": 1
-      },
-      {
-        "productId": "plan-plus-pro",
-        "variantId": "plan-plus-pro-standard",
-        "quantity": 1
-      },
-      {
-        "productId": "plan-plus",
-        "variantId": "plan-plus-standard",
-        "quantity": 1
-      },
-      {
-        "productId": "plan-unlimited",
-        "variantId": "plan-unlimited-standard",
-        "quantity": 1
-      }
-    ],
-    "currentStep": 2
+    "items": [],
+    "currentStep": 0
   },
-  "submissions": [],
+  "submissions": [
+    {
+      "items": [],
+      "submittedAt": "2026-07-05T17:03:29.301Z",
+      "id": "aRSmNVyWSU4"
+    }
+  ],
   "summary": {
     "groups": [
       {
