@@ -25,7 +25,8 @@ export function ProductCard({
 
   const hasSale = selectedVariant.onSale ?? false;
   const discount = selectedVariant.discountPercent ?? 0;
-  const mainImage = imageMap[product.image] ?? "";
+  const mainImage =
+    imageMap[selectedVariant.image ?? product.image] ?? "";
   const isSelected = quantity > 0;
   const showVariants = product.variants.length > 1;
 
@@ -37,17 +38,21 @@ export function ProductCard({
     }
   };
 
+  const salePrice = hasSale
+    ? (selectedVariant.salePrice as number)
+    : selectedVariant.price;
+
   return (
     <div
       onClick={handleCardClick}
       style={isSelected ? { borderColor: "#4E2FD2B2" } : undefined}
-      className={`flex h-full cursor-pointer flex-col rounded-[15px] border-2 bg-card px-[11px] py-[29.35px] transition-colors ${
+      className={`flex h-full cursor-pointer flex-col rounded-[16px] border-2 bg-card px-[25px]! py-[11px]! transition-colors md:flex-row md:gap-5 md:p-5 ${
         isSelected ? "" : "border-[#e2dbf6]"
       }`}
     >
-      <div className="relative mb-3 flex items-center justify-center">
+      <div className="relative flex w-full shrink-0 items-center justify-center py-1 md:w-[101px] md:min-h-[137px] md:py-0">
         {discount > 0 && (
-          <span className="absolute left-0 top-0 rounded-full bg-primary px-[6px] py-[2px] text-[12px] font-normal text-primary-foreground">
+          <span className="absolute left-0 top-0 z-10 rounded-full bg-primary px-2 py-0.5 text-xs font-normal text-primary-foreground">
             Save {discount}%
           </span>
         )}
@@ -55,55 +60,60 @@ export function ProductCard({
           <img
             src={mainImage}
             alt={product.name}
-            className=" w-[202.6px] h-[117.3944px] object-contain"
+            className="h-[140px] w-full max-w-[220px] object-contain md:h-[137px] md:w-[101px] md:max-w-[101px] md:rounded-[5px]"
           />
         )}
       </div>
 
-      <h3 className="text-lg font-bold leading-tight text-foreground">
-        {product.name}
-      </h3>
-      <p className="mt-[8px] text-sm leading-snug text-muted-foreground">
-        {product.description}{" "}
+      <div className="flex min-w-0 flex-1 flex-col md:mt-0">
+        <h3 className="text-lg font-bold leading-tight text-foreground">
+          {product.name}
+        </h3>
+        <p className="pt-[8px] m-0! text-[12px] text-[#1F1F1FBF]">
+          {product.description}{" "}
+          <a
+            href={product.learnMoreUrl ?? "#"}
+            onClick={(e) => e.stopPropagation()}
+            className="font-bold text-[#2563eb] underline underline-offset-2 md:hidden"
+          >
+            Learn More
+          </a>
+        </p>
         <a
           href={product.learnMoreUrl ?? "#"}
           onClick={(e) => e.stopPropagation()}
-          className="font-bold text-[#2563eb] underline underline-offset-2"
+          className="hidden w-fit text-[12px] font-normal text-[#2563eb] underline underline-offset-2 md:block"
         >
           Learn More
         </a>
-      </p>
 
-      {showVariants && (
-        <div className="mt-3">
-          <VariantSelector
-            variants={product.variants}
-            selectedId={effectiveVariantId}
-            onSelect={onVariantSelect}
+        {showVariants && (
+          <div className="mt-3">
+            <VariantSelector
+              variants={product.variants}
+              selectedId={effectiveVariantId}
+              onSelect={onVariantSelect}
+            />
+          </div>
+        )}
+
+        <div className="mt-auto flex items-center justify-between gap-4 pt-[10px] md:items-end">
+          <QuantityStepper
+            value={quantity}
+            min={1}
+            max={product.maxQuantity}
+            onChange={onQuantityChange}
           />
-        </div>
-      )}
-
-      <div className="flex flex-wrap items-center justify-between gap-x-2 gap-y-2 pt-[10px]">
-        <QuantityStepper
-          value={quantity}
-          min={1}
-          max={product.maxQuantity}
-          onChange={onQuantityChange}
-        />
-        <div className="whitespace-nowrap text-right leading-tight">
-          {hasSale && (
-            <span className="mr-1 text-sm font-semibold text-destructive line-through">
-              {formatPrice(selectedVariant.price)}
-            </span>
-          )}
-          <span className="text-base font-bold text-foreground">
-            {formatPrice(
-              hasSale
-                ? (selectedVariant.salePrice as number)
-                : selectedVariant.price,
+          <div className="flex flex-row items-baseline gap-1 leading-tight md:flex-col md:items-end md:gap-0">
+            {hasSale && (
+              <span className="text-sm font-semibold text-destructive line-through">
+                {formatPrice(selectedVariant.price)}
+              </span>
             )}
-          </span>
+            <span className="text-base font-bold text-foreground md:text-lg">
+              {formatPrice(salePrice)}
+            </span>
+          </div>
         </div>
       </div>
     </div>

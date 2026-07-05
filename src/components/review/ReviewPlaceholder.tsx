@@ -88,6 +88,10 @@ export function ReviewPlaceholder() {
     }))
     .filter((group) => group.items.length > 0);
 
+  const planLine = lines.find((line) => line.product.category === "plan");
+
+  const toMonthlyPrice = (price: number) => (price > 50 ? price / 12 : price);
+
   if (isError) {
     return (
       <ErrorState
@@ -111,7 +115,7 @@ export function ReviewPlaceholder() {
 
   return (
     <div className="bg-[#EDF4FF] rounded-[10px]">
-      <div className="px-[15px] pt-[20px] pb-[5px]">
+      <div className="px-[15px] md:pt-[20px] pt-[15px] pb-[5px]">
         <p className="text-[#484848]">Review</p>
       </div>
       <div className="flex items-center justify-center flex-col pt-5 pr-5 pl-5 pb-[31px]">
@@ -135,14 +139,17 @@ export function ReviewPlaceholder() {
               {groups.map((group) => (
                 <div
                   key={group.title}
-                  className="border border-b-1 border-[#CED6DE] border-t-0 border-r-0 border-l-0 pb-[10px] pt-[15px]"
+                  className={`border border-b-1 border-[#CED6DE] border-t-0 border-r-0 border-l-0 pb-[10px] pt-[15px] ${
+                    group.title === "Plan" ? "hidden md:block" : ""
+                  }`}
                 >
                   <h3 className="mb-[8px] text-[12px] font-normal uppercase text-[#A8B2BD]">
                     {group.title}
                   </h3>
                   <div className="flex gap-[12px] flex-col">
                     {group.items.map(({ item, product, variant }) => {
-                      const image = imageMap[variant.image || product.image] ?? "";
+                      const image =
+                        imageMap[variant.image || product.image] ?? "";
                       const hasSale = variant.onSale ?? false;
                       const original = variant.price * item.quantity;
                       const final =
@@ -211,18 +218,55 @@ export function ReviewPlaceholder() {
         </div>
 
         <div className="flex flex-col w-full">
-          <div className="flex items-start gap-[12px]">
+          {planLine && (
+            <div className="md:hidden w-full border-t border-[#A8B2BD] pt-[15px] pb-[10px]">
+              <h3 className="mb-[8px] text-[12px] font-normal uppercase text-[#A8B2BD]">
+                Home Monitoring Plan
+              </h3>
+              <div className="flex items-center gap-[12px] border-b border-[#CED6DE] pb-[10px]">
+                <img
+                  src={imageMap["Layer_1.png"] ?? ""}
+                  alt=""
+                  aria-hidden
+                  className="size-[14px] shrink-0 object-contain"
+                />
+                <div className="flex flex-1 items-center text-[14px] font-normal text-[#0B0D10]">
+                  {planLine.product.name.split(" ")[0]}{" "}
+                  <span className="text-[#4E2FD2]">
+                    {planLine.product.name.split(" ").slice(1).join(" ")}
+                  </span>
+                </div>
+                <div className="whitespace-nowrap text-right leading-none">
+                  {planLine.variant.onSale && (
+                    <p className="text-[12px] text-[#6F7882] line-through">
+                      {formatPrice(toMonthlyPrice(planLine.variant.price))}/mo
+                    </p>
+                  )}
+                  <p className="text-[12px] text-[#4E2FD2]">
+                    {formatPrice(
+                      toMonthlyPrice(
+                        planLine.variant.salePrice ?? planLine.variant.price,
+                      ),
+                    )}
+                    /mo
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <div className="flex items-start gap-[12px] border-t border-[#CED6DE] pt-[10px] md:border-t-0 md:pt-0">
             <img
               src={imageMap["Wyze Sense Keypad.png"] ?? ""}
-              alt="100% Wyze satisfaction guarantee"
+              alt="Fast shipping"
               className="size-[41px] shrink-0 object-contain"
             />
             <div className="flex items-center justify-between w-full">
               <h3 className="text-[14px] font-normal text-[#0B0D10]">
                 Fast Shipping
               </h3>
-              <div>
-                <p className="text-[14px] text-[#6F7882]">$5.99</p>
+              <div className="text-right leading-none">
+                <p className="text-[14px] text-[#6F7882] line-through">$5.99</p>
                 <p className="text-[14px] text-[#4E2FD2]">FREE</p>
               </div>
             </div>
@@ -233,7 +277,7 @@ export function ReviewPlaceholder() {
               alt="100% Wyze satisfaction guarantee"
               className="size-[78px] shrink-0 object-contain"
             />
-            <div className="flex items-center flex-col justify-between gap-[8px]">
+            <div className="flex md:items-center items-end flex-col justify-between gap-[8px]">
               <span className="rounded-[3px] bg-primary px-[8px] py-[5px] text-[12px] font-normal text-[#FFFFFF]">
                 as low as {formatPrice(monthlyEstimate)}/mo
               </span>

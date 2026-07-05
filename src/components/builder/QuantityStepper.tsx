@@ -22,7 +22,7 @@ export function QuantityStepper({
           e.stopPropagation();
           onChange(value - 1);
         }}
-        className="flex size-[20px] items-center justify-center bg-[#FFFFFF] text-black transition-colors hover:bg-muted/70 disabled:cursor-not-allowed disabled:opacity-40 rounded-[4px] cursor-pointer"
+        className="flex size-5 cursor-pointer items-center justify-center rounded border border-border bg-muted/40 text-foreground transition-colors hover:bg-muted/70 disabled:cursor-not-allowed disabled:opacity-40"
         aria-label="Decrease quantity"
       >
         <Minus className="size-[8px]" />
@@ -37,7 +37,7 @@ export function QuantityStepper({
           e.stopPropagation();
           onChange(value + 1);
         }}
-        className="flex size-[20px] items-center justify-center bg-[#FFFFFF] text-black transition-colors hover:bg-muted/70 disabled:cursor-not-allowed disabled:opacity-40 rounded-[4px] cursor-pointer"
+        className="flex size-5 cursor-pointer items-center justify-center rounded border border-border bg-muted/40 text-foreground transition-colors hover:bg-muted/70 disabled:cursor-not-allowed disabled:opacity-40"
         aria-label="Increase quantity"
       >
         <Plus className="size-[8px]" />

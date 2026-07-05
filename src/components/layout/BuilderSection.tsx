@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Accordion } from "@/components/ui/accordion";
 import { AccordionPlaceholder } from "@/components/builder/AccordionPlaceholder";
-import { ProductGrid } from "@/components/builder/ProductGrid";
+import { ProductGrid, productGridClassName } from "@/components/builder/ProductGrid";
 import { useServerBundle } from "@/hooks/useServerBundle";
 import { useProducts } from "@/hooks/useProducts";
 import { Package } from "lucide-react";
@@ -63,12 +63,17 @@ export function BuilderSection() {
   }
 
   const handleStepChange = (val: string) => {
-    const step = Number(val);
-    if (step) setCurrentStep(step);
+    setCurrentStep(val ? Number(val) : 0);
   };
 
   return (
-    <Accordion type="single" collapsible value={String(state.currentStep)} onValueChange={handleStepChange} className="gap-4">
+    <Accordion
+      type="single"
+      collapsible
+      value={state.currentStep > 0 ? String(state.currentStep) : ""}
+      onValueChange={handleStepChange}
+      className="gap-4 md:gap-0"
+    >
       {steps.map((config) => {
         const stepProducts = isLoading ? [] : products.filter((p: { category: string }) => config.categories.includes(p.category));
         const selectedCount = new Set(
@@ -86,7 +91,7 @@ export function BuilderSection() {
             selectedCount={selectedCount}
           >
             {isLoading ? (
-              <div className="grid grid-cols-1 gap-[15px] md:grid-cols-3 lg:grid-cols-5">
+              <div className={productGridClassName}>
                 {Array.from({ length: 5 }).map((_, i) => (
                   <ProductCardSkeleton key={i} />
                 ))}
@@ -100,11 +105,11 @@ export function BuilderSection() {
               />
             )}
             {config.nextLabel && (
-              <div className="mt-6 flex justify-center">
+              <div className="mt-[15px] flex justify-center">
                 <button
                   type="button"
                   onClick={() => setCurrentStep(config.step + 1)}
-                  className="rounded-lg border-2 border-primary bg-card px-6 py-2.5 text-sm font-bold text-primary transition-colors hover:bg-primary/5"
+                  className="rounded-[7px] border-2 border-[#4E2FD2]! px-[24px] py-[7.5px] text-[18px] font-normal text-primary transition-colors hover:bg-primary/5 bg-transparent"
                 >
                   {config.nextLabel}
                 </button>

@@ -26,7 +26,7 @@ export function VariantSelector({
               onSelect(variant.id);
             }}
             style={isSelected ? { borderColor: "#0AA288" } : undefined}
-            className={`flex items-center gap-1.5 rounded-lg border-2 px-[6.5px] py-[2px] text-[10px] cursor-pointer font-normal text-[#1F1F1F] ${
+            className={`flex items-center gap-1.5 rounded-[2px] border-2 px-[6.5px] py-[2px] text-[10px] cursor-pointer font-normal text-[#1F1F1F] ${
               isSelected
                 ? "bg-[#1DF0BB0A]"
                 : "border-border bg-background hover:border-muted-foreground/40"
@@ -37,7 +37,7 @@ export function VariantSelector({
                 src={thumb}
                 alt=""
                 aria-hidden
-                className="size-[22px] shrink-0 object-contain"
+                className="size-[22px] shrink-0 rounded-full object-contain md:rounded-none"
               />
             )}
             <span>{variant.name}</span>

@@ -36,33 +36,6 @@
           "image": "image 110.png",
           "onSale": true,
           "discountPercent": 22
-        },
-        {
-          "id": "cam-v4-blue",
-          "name": "Blue",
-          "price": 37.98,
-          "salePrice": 29.98,
-          "image": "image 112.png",
-          "onSale": true,
-          "discountPercent": 21
-        },
-        {
-          "id": "cam-v4-kit",
-          "name": "Kit",
-          "price": 45.98,
-          "salePrice": 36.98,
-          "image": "image 13.png",
-          "onSale": true,
-          "discountPercent": 19
-        },
-        {
-          "id": "cam-v4-2pack",
-          "name": "2-Pack",
-          "price": 65.98,
-          "salePrice": 49.98,
-          "image": "image 110.png",
-          "onSale": true,
-          "discountPercent": 24
         }
       ]
     },
@@ -102,33 +75,6 @@
           "image": "image 110.png",
           "onSale": true,
           "discountPercent": 12
-        },
-        {
-          "id": "cam-pan-blue",
-          "name": "Blue",
-          "price": 41.98,
-          "salePrice": 36.98,
-          "image": "image 112.png",
-          "onSale": true,
-          "discountPercent": 11
-        },
-        {
-          "id": "cam-pan-kit",
-          "name": "Kit",
-          "price": 49.98,
-          "salePrice": 42.98,
-          "image": "image 13.png",
-          "onSale": true,
-          "discountPercent": 14
-        },
-        {
-          "id": "cam-pan-2pack",
-          "name": "2-Pack",
-          "price": 72.98,
-          "salePrice": 62.98,
-          "image": "image 110.png",
-          "onSale": true,
-          "discountPercent": 13
         }
       ]
     },
@@ -168,33 +114,6 @@
           "image": "image 110.png",
           "onSale": true,
           "discountPercent": 22
-        },
-        {
-          "id": "cam-floodlight-blue",
-          "name": "Blue",
-          "price": 92.98,
-          "salePrice": 72.98,
-          "image": "image 112.png",
-          "onSale": true,
-          "discountPercent": 21
-        },
-        {
-          "id": "cam-floodlight-kit",
-          "name": "Kit",
-          "price": 109.98,
-          "salePrice": 84.98,
-          "image": "image 13.png",
-          "onSale": true,
-          "discountPercent": 22
-        },
-        {
-          "id": "cam-floodlight-2pack",
-          "name": "2-Pack",
-          "price": 162.98,
-          "salePrice": 129.98,
-          "image": "image 110.png",
-          "onSale": true,
-          "discountPercent": 20
         }
       ]
     },
@@ -234,33 +153,6 @@
           "image": "image 13.png",
           "onSale": true,
           "discountPercent": 16
-        },
-        {
-          "id": "cam-doorbell-elite",
-          "name": "Elite",
-          "price": 149.98,
-          "salePrice": 124.98,
-          "image": "image 112.png",
-          "onSale": true,
-          "discountPercent": 16
-        },
-        {
-          "id": "cam-doorbell-kit",
-          "name": "Kit",
-          "price": 89.98,
-          "salePrice": 74.98,
-          "image": "image 13.png",
-          "onSale": true,
-          "discountPercent": 16
-        },
-        {
-          "id": "cam-doorbell-2pack",
-          "name": "2-Pack",
-          "price": 129.98,
-          "salePrice": 109.98,
-          "image": "image 110.png",
-          "onSale": true,
-          "discountPercent": 15
         }
       ]
     },
@@ -300,33 +192,6 @@
           "image": "image 110.png",
           "onSale": false,
           "discountPercent": 0
-        },
-        {
-          "id": "cam-battery-blue",
-          "name": "Blue",
-          "price": 92.98,
-          "salePrice": null,
-          "image": "image 112.png",
-          "onSale": false,
-          "discountPercent": 0
-        },
-        {
-          "id": "cam-battery-kit",
-          "name": "Kit",
-          "price": 109.98,
-          "salePrice": 89.98,
-          "image": "image 13.png",
-          "onSale": true,
-          "discountPercent": 18
-        },
-        {
-          "id": "cam-battery-2pack",
-          "name": "2-Pack",
-          "price": 169.98,
-          "salePrice": 149.98,
-          "image": "image 110.png",
-          "onSale": true,
-          "discountPercent": 11
         }
       ]
     },
@@ -534,37 +399,17 @@
   "bundle": {
     "items": [
       {
-        "productId": "sensor-hub",
-        "variantId": "sensor-hub-standard",
+        "productId": "plan-plus",
+        "variantId": "plan-plus-standard",
         "quantity": 1
       },
       {
-        "productId": "sensor-entry",
-        "variantId": "sensor-entry-standard",
-        "quantity": 1
-      },
-      {
-        "productId": "sensor-motion",
-        "variantId": "sensor-motion-standard",
-        "quantity": 1
-      },
-      {
-        "productId": "sensor-keypad",
-        "variantId": "sensor-keypad-standard",
-        "quantity": 1
-      },
-      {
-        "productId": "cam-floodlight",
-        "variantId": "cam-floodlight-grey",
-        "quantity": 4
-      },
-      {
-        "productId": "cam-pan",
-        "variantId": "cam-pan-grey",
+        "productId": "cam-battery",
+        "variantId": "cam-battery-white",
         "quantity": 1
       }
     ],
-    "currentStep": 3
+    "currentStep": 1
   },
   "submissions": [
     {
@@ -1448,6 +1293,169 @@
       ],
       "submittedAt": "2026-07-04T20:57:16.204Z",
       "id": "ZqjKCw8iJHc"
+    },
+    {
+      "items": [
+        {
+          "productId": "sensor-hub",
+          "variantId": "sensor-hub-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-entry",
+          "variantId": "sensor-entry-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-motion",
+          "variantId": "sensor-motion-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-keypad",
+          "variantId": "sensor-keypad-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-grey",
+          "quantity": 4
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-grey",
+          "quantity": 1
+        }
+      ],
+      "submittedAt": "2026-07-04T20:59:52.001Z",
+      "id": "ZTl9oUEFd8U"
+    },
+    {
+      "items": [],
+      "submittedAt": "2026-07-04T21:00:26.561Z",
+      "id": "8n_JYqsRyko"
+    },
+    {
+      "items": [
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-white",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-black",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-kit",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-2pack",
+          "quantity": 1
+        }
+      ],
+      "submittedAt": "2026-07-04T21:05:35.307Z",
+      "id": "-DzaFy5OcJQ"
+    },
+    {
+      "items": [],
+      "submittedAt": "2026-07-04T21:05:45.023Z",
+      "id": "gGGwnQQ300A"
+    },
+    {
+      "items": [
+        {
+          "productId": "cam-pan",
+          "variantId": "cam-pan-black",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-v4",
+          "variantId": "cam-v4-black",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-floodlight",
+          "variantId": "cam-floodlight-black",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-doorbell",
+          "variantId": "cam-doorbell-pro",
+          "quantity": 1
+        },
+        {
+          "productId": "cam-battery",
+          "variantId": "cam-battery-grey",
+          "quantity": 1
+        },
+        {
+          "productId": "plan-unlimited",
+          "variantId": "plan-unlimited-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "plan-plus",
+          "variantId": "plan-plus-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "plan-plus-pro",
+          "variantId": "plan-plus-pro-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-entry",
+          "variantId": "sensor-entry-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-keypad",
+          "variantId": "sensor-keypad-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-hub",
+          "variantId": "sensor-hub-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "sensor-motion",
+          "variantId": "sensor-motion-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "extra-lockbox",
+          "variantId": "extra-lockbox-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "extra-solar",
+          "variantId": "extra-solar-standard",
+          "quantity": 1
+        },
+        {
+          "productId": "extra-microsd",
+          "variantId": "extra-microsd-standard",
+          "quantity": 1
+        }
+      ],
+      "submittedAt": "2026-07-04T21:06:54.823Z",
+      "id": "tgXphJpmATs"
+    },
+    {
+      "items": [],
+      "submittedAt": "2026-07-05T15:54:20.357Z",
+      "id": "OekZloqPq-Y"
     }
   ],
   "summary": {

@@ -14,7 +14,10 @@ type ProductGridProps = {
   getProductItems: (
     productId: string,
   ) => { productId: string; variantId: string; quantity: number }[];
-}
+};
+
+export const productGridClassName =
+  "grid grid-cols-1 gap-[15px] pt-[5px] md:grid-cols-2 md:[&>*:last-child:nth-child(odd)]:col-span-2 md:[&>*:last-child:nth-child(odd)]:w-[calc(50%-7.5px)] md:[&>*:last-child:nth-child(odd)]:justify-self-center";
 
 export function ProductGrid({
   products,
@@ -22,14 +25,19 @@ export function ProductGrid({
   updateQuantity,
   getProductItems,
 }: ProductGridProps) {
-  const [activeVariant, setActiveVariant] = useState<Record<string, string>>({});
+  const [activeVariant, setActiveVariant] = useState<Record<string, string>>(
+    {},
+  );
 
   return (
-    <div className="grid grid-cols-1 gap-[15px] md:grid-cols-3 lg:grid-cols-3">
+    <div className={productGridClassName}>
       {products.map((product) => {
         const items = getProductItems(product.id);
-        const activeId = activeVariant[product.id] ?? items[0]?.variantId ?? null;
-        const activeItem = activeId ? items.find((i) => i.variantId === activeId) : undefined;
+        const activeId =
+          activeVariant[product.id] ?? items[0]?.variantId ?? null;
+        const activeItem = activeId
+          ? items.find((i) => i.variantId === activeId)
+          : undefined;
         const quantity = activeItem?.quantity ?? 0;
 
         return (
@@ -39,7 +47,10 @@ export function ProductGrid({
             selectedVariantId={activeId}
             quantity={quantity}
             onVariantSelect={(variantId) => {
-              setActiveVariant((prev) => ({ ...prev, [product.id]: variantId }));
+              setActiveVariant((prev) => ({
+                ...prev,
+                [product.id]: variantId,
+              }));
               const exists = items.some((i) => i.variantId === variantId);
               if (!exists) {
                 addItem(product.id, variantId);
