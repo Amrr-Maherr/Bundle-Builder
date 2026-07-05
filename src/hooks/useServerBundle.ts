@@ -1,6 +1,7 @@
 import toast from "react-hot-toast";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { fetchBundle, saveBundle } from "@/lib/api";
+import type { BundleItem } from "@/types";
 
 const BUNDLE_KEY = ["bundle"];
 
@@ -16,7 +17,8 @@ export function useServerBundle() {
   const currentStep = bundle?.currentStep ?? 1;
 
   const persist = useMutation({
-    mutationFn: (data: { items: typeof items; currentStep: number }) => saveBundle(data.items, data.currentStep),
+    mutationFn: (data: { items: BundleItem[]; currentStep: number }) =>
+      saveBundle(data.items, data.currentStep),
     onSuccess: (result) => {
       queryClient.setQueryData(BUNDLE_KEY, result);
     },
@@ -25,45 +27,52 @@ export function useServerBundle() {
     },
   });
 
-  const save = (nextItems: typeof items, step?: number) => {
-    persist.mutate({ items: nextItems, currentStep: step ?? currentStep });
+  const save = (nextItems: BundleItem[], step = currentStep) => {
+    persist.mutate({ items: nextItems, currentStep: step });
   };
 
   const addItem = (productId: string, variantId: string) => {
     const exists = items.some(
-      (item) => item.productId === productId && item.variantId === variantId
+      (item) => item.productId === productId && item.variantId === variantId,
     );
-    if (exists) return;
+    if (exists) return false;
     save([...items, { productId, variantId, quantity: 1 }]);
+    return true;
   };
 
-  const updateQuantity = (productId: string, variantId: string, quantity: number) => {
+  const updateQuantity = (
+    productId: string,
+    variantId: string,
+    quantity: number,
+  ) => {
     if (quantity <= 0) {
-      save(items.filter(
-        (item) => !(item.productId === productId && item.variantId === variantId)
-      ));
+      save(
+        items.filter(
+          (item) =>
+            !(item.productId === productId && item.variantId === variantId),
+        ),
+      );
       return;
     }
-    save(items.map((item) =>
-      item.productId === productId && item.variantId === variantId
-        ? { ...item, quantity }
-        : item
-    ));
+
+    save(
+      items.map((item) =>
+        item.productId === productId && item.variantId === variantId
+          ? { ...item, quantity }
+          : item,
+      ),
+    );
   };
 
   const setCurrentStep = (step: number) => {
     save(items, step);
   };
 
-  const getProductItems = (productId: string) =>
-    items.filter((item) => item.productId === productId);
-
   return {
     state: { currentStep, items },
     addItem,
     updateQuantity,
     setCurrentStep,
-    getProductItems,
     isLoading,
   };
 }

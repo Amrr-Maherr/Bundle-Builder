@@ -30,3 +30,9 @@ export type BundleState = {
   currentStep: number;
   items: BundleItem[];
 }
+
+export type QuantityChangeHandler = (
+  productId: string,
+  variantId: string,
+  quantity: number,
+) => void;

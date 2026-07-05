@@ -1,6 +1,8 @@
 import type { Product } from "@/types";
-import { VariantSelector } from "./VariantSelector";
+import { findVariant } from "@/utils/products";
+import { getSalePrice, hasVariantSale } from "@/utils/pricing";
 import { imageMap } from "@/utils";
+import { VariantSelector } from "./VariantSelector";
 import { ProductCardFooter } from "./product-card/ProductCardFooter";
 import { ProductCardImage } from "./product-card/ProductCardImage";
 import { ProductCardInfo } from "./product-card/ProductCardInfo";
@@ -20,42 +22,28 @@ export function ProductCard({
   onVariantSelect,
   onQuantityChange,
 }: ProductCardProps) {
-  const effectiveVariantId = selectedVariantId ?? product.variants[0].id;
-  const selectedVariant =
-    product.variants.find((v) => v.id === effectiveVariantId) ??
-    product.variants[0];
-
-  const hasSale = selectedVariant.onSale ?? false;
-  const discount = selectedVariant.discountPercent ?? 0;
-  const mainImage =
-    imageMap[selectedVariant.image ?? product.image] ?? "";
+  const selectedVariant = findVariant(product, selectedVariantId);
+  const hasSale = hasVariantSale(selectedVariant);
   const isSelected = quantity > 0;
   const showVariants = product.variants.length > 1;
 
   const handleCardClick = () => {
-    if (isSelected) {
-      onQuantityChange(0);
-    } else if (!showVariants) {
-      onQuantityChange(1);
-    }
+    if (isSelected) onQuantityChange(0);
+    else if (!showVariants) onQuantityChange(1);
   };
-
-  const salePrice = hasSale
-    ? (selectedVariant.salePrice as number)
-    : selectedVariant.price;
 
   return (
     <div
       onClick={handleCardClick}
       style={isSelected ? { borderColor: "#4E2FD2B2" } : undefined}
-      className={`flex h-full cursor-pointer flex-col rounded-[16px] border-2 bg-card px-[25px]! py-[11px]! transition-colors md:flex-row md:gap-5 md:p-5 ${
+      className={`flex h-full cursor-pointer flex-col rounded-[10px] border-2 bg-card px-[25px]! py-[11px]! transition-colors md:flex-row md:gap-5 md:p-5 ${
         isSelected ? "" : "border-[#e2dbf6]"
       }`}
     >
       <ProductCardImage
-        imageSrc={mainImage}
+        imageSrc={imageMap[selectedVariant.image ?? product.image] ?? ""}
         alt={product.name}
-        discount={discount}
+        discount={selectedVariant.discountPercent ?? 0}
       />
 
       <div className="flex min-w-0 flex-1 flex-col md:mt-0">
@@ -68,8 +56,9 @@ export function ProductCard({
         {showVariants && (
           <div className="mt-3">
             <VariantSelector
+              product={product}
               variants={product.variants}
-              selectedId={effectiveVariantId}
+              selectedId={selectedVariant.id}
               onSelect={onVariantSelect}
             />
           </div>
@@ -80,7 +69,7 @@ export function ProductCard({
           maxQuantity={product.maxQuantity}
           hasSale={hasSale}
           originalPrice={selectedVariant.price}
-          salePrice={salePrice}
+          salePrice={getSalePrice(selectedVariant)}
           onQuantityChange={onQuantityChange}
         />
       </div>

@@ -1,22 +1,22 @@
 import { QuantityStepper } from "@/components/builder/QuantityStepper";
+import type { QuantityChangeHandler } from "@/types";
 import { formatPrice, imageMap } from "@/utils";
+import {
+  hasVariantSale,
+  lineOriginalTotal,
+  lineSaleTotal,
+} from "@/utils/pricing";
 import type { ReviewLine } from "./types";
 
 type ReviewLineItemProps = {
   line: ReviewLine;
-  onQuantityChange: (
-    productId: string,
-    variantId: string,
-    quantity: number,
-  ) => void;
+  onQuantityChange: QuantityChangeHandler;
 };
 
 export function ReviewLineItem({ line, onQuantityChange }: ReviewLineItemProps) {
   const { item, product, variant } = line;
-  const image = imageMap[variant.image || product.image] ?? "";
-  const hasSale = variant.onSale ?? false;
-  const original = variant.price * item.quantity;
-  const final = (variant.salePrice ?? variant.price) * item.quantity;
+  const image = imageMap[variant.image ?? product.image] ?? "";
+  const hasSale = hasVariantSale(variant);
   const showVariant = product.variants.length > 1;
 
   return (
@@ -47,18 +47,18 @@ export function ReviewLineItem({ line, onQuantityChange }: ReviewLineItemProps) 
           value={item.quantity}
           min={1}
           max={product.maxQuantity}
-          onChange={(q) =>
-            onQuantityChange(item.productId, item.variantId, q)
+          onChange={(quantity) =>
+            onQuantityChange(item.productId, item.variantId, quantity)
           }
         />
         <div className="flex flex-col items-center justify-center whitespace-nowrap text-right leading-none">
           {hasSale && (
             <span className="text-[14px] font-normal text-[#6F7882] line-through">
-              {formatPrice(original)}
+              {formatPrice(lineOriginalTotal(variant, item.quantity))}
             </span>
           )}
           <span className="text-[14px] font-normal text-[#4E2FD2]">
-            {formatPrice(final)}
+            {formatPrice(lineSaleTotal(variant, item.quantity))}
           </span>
         </div>
       </div>

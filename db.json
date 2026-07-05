@@ -407,6 +407,21 @@
         "productId": "cam-battery",
         "variantId": "cam-battery-white",
         "quantity": 1
+      },
+      {
+        "productId": "cam-pan",
+        "variantId": "cam-pan-grey",
+        "quantity": 1
+      },
+      {
+        "productId": "cam-pan",
+        "variantId": "cam-pan-black",
+        "quantity": 1
+      },
+      {
+        "productId": "cam-pan",
+        "variantId": "cam-pan-white",
+        "quantity": 1
       }
     ],
     "currentStep": 1

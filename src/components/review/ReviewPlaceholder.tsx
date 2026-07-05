@@ -1,28 +1,23 @@
 import toast from "react-hot-toast";
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useServerBundle } from "@/hooks/useServerBundle";
 import { useProducts } from "@/hooks/useProducts";
-import { fetchSummary, submitBundle } from "@/lib/api";
+import { useSummary } from "@/hooks/useSummary";
+import { submitBundle } from "@/lib/api";
+import {
+  buildReviewGroups,
+  buildReviewLines,
+  computeReviewTotals,
+} from "@/lib/review";
 import { ErrorState } from "@/components/shared/ErrorState";
 import { ReviewFooter } from "./ReviewFooter";
 import { ReviewGroupsSection } from "./ReviewGroupsSection";
 import { ReviewSummarySkeleton } from "./ReviewSummarySkeleton";
-import type { Summary } from "./types";
 
 export function ReviewPlaceholder() {
   const { state, updateQuantity } = useServerBundle();
   const { data: products = [] } = useProducts();
-  const {
-    data: summary,
-    isLoading,
-    isError,
-    error,
-    refetch,
-  } = useQuery<Summary>({
-    queryKey: ["summary"],
-    queryFn: fetchSummary,
-  });
-
+  const { data: summary, isLoading, isError, error, refetch } = useSummary();
   const queryClient = useQueryClient();
 
   const saveMutation = useMutation({
@@ -40,48 +35,9 @@ export function ReviewPlaceholder() {
     },
   });
 
-  const categoryGroup =
-    summary?.groups.reduce<Record<string, string>>((map, g) => {
-      for (const cat of g.categories) map[cat] = g.title;
-      return map;
-    }, {}) ?? {};
-
-  const lines = state.items
-    .map((item) => {
-      const product = products.find(
-        (p: { id: string }) => p.id === item.productId,
-      );
-      const variant = product?.variants.find((v) => v.id === item.variantId);
-      if (!product || !variant) return null;
-      return {
-        item,
-        product,
-        variant,
-        group: categoryGroup[product.category] ?? "Other",
-      };
-    })
-    .filter((line): line is NonNullable<typeof line> => line !== null);
-
-  const subtotal = lines.reduce(
-    (sum, l) => sum + l.variant.price * l.item.quantity,
-    0,
-  );
-  const total = lines.reduce(
-    (sum, l) =>
-      sum + (l.variant.salePrice ?? l.variant.price) * l.item.quantity,
-    0,
-  );
-  const savings = subtotal - total;
-  const monthlyEstimate = total / 12;
-
-  const groupTitles = summary?.groups.map((g) => g.title) ?? [];
-  const groups = groupTitles
-    .map((title) => ({
-      title,
-      items: lines.filter((l) => l.group === title),
-    }))
-    .filter((group) => group.items.length > 0);
-
+  const lines = buildReviewLines(state.items, products, summary);
+  const groups = buildReviewGroups(lines, summary);
+  const totals = computeReviewTotals(lines);
   const planLine = lines.find((line) => line.product.category === "plan");
 
   if (isError) {
@@ -109,10 +65,7 @@ export function ReviewPlaceholder() {
         />
         <ReviewFooter
           planLine={planLine}
-          subtotal={subtotal}
-          total={total}
-          savings={savings}
-          monthlyEstimate={monthlyEstimate}
+          {...totals}
           isSaving={saveMutation.isPending}
           isSaved={saveMutation.isSuccess}
           onSave={() => saveMutation.mutate()}

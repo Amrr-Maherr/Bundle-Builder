@@ -1,41 +1,39 @@
+import type { BundleItem, BundleState, Product } from "@/types";
+
 const BASE_URL = "http://localhost:3001";
 
-export async function fetchProducts() {
-  const res = await fetch(`${BASE_URL}/products`);
-  if (!res.ok) throw new Error("Failed to fetch products");
+async function apiFetch<T>(path: string, options?: RequestInit): Promise<T> {
+  const res = await fetch(`${BASE_URL}${path}`, options);
+  if (!res.ok) throw new Error(`Request failed: ${path}`);
   return res.json();
 }
 
-export async function fetchSummary() {
-  const res = await fetch(`${BASE_URL}/summary`);
-  if (!res.ok) throw new Error("Failed to fetch summary");
-  return res.json();
+export function fetchProducts() {
+  return apiFetch<Product[]>("/products");
 }
 
-export async function fetchBundle(): Promise<{ items: { productId: string; variantId: string; quantity: number }[]; currentStep: number }> {
-  const res = await fetch(`${BASE_URL}/bundle`);
-  if (!res.ok) throw new Error("Failed to fetch bundle");
-  return res.json();
+export function fetchSummary() {
+  return apiFetch<{ groups: { id: string; title: string; categories: string[] }[] }>(
+    "/summary",
+  );
 }
 
-export async function saveBundle(items: { productId: string; variantId: string; quantity: number }[], currentStep: number) {
-  const res = await fetch(`${BASE_URL}/bundle`, {
+export function fetchBundle() {
+  return apiFetch<BundleState>("/bundle");
+}
+
+export function saveBundle(items: BundleItem[], currentStep: number) {
+  return apiFetch<BundleState>("/bundle", {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ items, currentStep }),
   });
-  if (!res.ok) throw new Error("Failed to save bundle");
-  return res.json();
 }
 
-export async function submitBundle(data: unknown) {
-  const res = await fetch(`${BASE_URL}/submissions`, {
+export function submitBundle(data: unknown) {
+  return apiFetch<unknown>("/submissions", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
   });
-  if (!res.ok) throw new Error("Failed to submit bundle");
-  return res.json();
 }
-
-

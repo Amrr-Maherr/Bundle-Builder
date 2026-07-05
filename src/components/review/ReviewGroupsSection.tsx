@@ -1,15 +1,12 @@
 import { ShoppingBag } from "lucide-react";
 import { EmptyState } from "@/components/shared/EmptyState";
+import type { QuantityChangeHandler } from "@/types";
 import { ReviewGroup } from "./ReviewGroup";
 import type { ReviewGroupData } from "./types";
 
 type ReviewGroupsSectionProps = {
   groups: ReviewGroupData[];
-  onQuantityChange: (
-    productId: string,
-    variantId: string,
-    quantity: number,
-  ) => void;
+  onQuantityChange: QuantityChangeHandler;
 };
 
 export function ReviewGroupsSection({

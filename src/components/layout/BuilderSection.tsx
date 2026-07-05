@@ -50,7 +50,7 @@ const steps: StepConfig[] = [
 ];
 
 export function BuilderSection() {
-  const { state, addItem, updateQuantity, getProductItems, setCurrentStep } = useServerBundle();
+  const { state, addItem, updateQuantity, setCurrentStep } = useServerBundle();
   const { data: products = [], isLoading, isError, error, refetch } = useProducts();
 
   if (isError) {
@@ -75,11 +75,14 @@ export function BuilderSection() {
       className="gap-4 md:gap-0"
     >
       {steps.map((config) => {
-        const stepProducts = isLoading ? [] : products.filter((p: { category: string }) => config.categories.includes(p.category));
+        const stepProducts = isLoading
+          ? []
+          : products.filter((p) => config.categories.includes(p.category));
+        const stepProductIds = new Set(stepProducts.map((p) => p.id));
         const selectedCount = new Set(
           state.items
-            .filter((item) => stepProducts.some((p) => p.id === item.productId))
-            .map((item) => item.productId)
+            .filter((item) => stepProductIds.has(item.productId))
+            .map((item) => item.productId),
         ).size;
 
         return (
@@ -99,9 +102,9 @@ export function BuilderSection() {
             ) : (
               <ProductGrid
                 products={stepProducts}
+                bundleItems={state.items}
                 addItem={addItem}
                 updateQuantity={updateQuantity}
-                getProductItems={getProductItems}
               />
             )}
             {config.nextLabel && (

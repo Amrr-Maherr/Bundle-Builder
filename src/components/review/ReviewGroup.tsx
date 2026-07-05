@@ -1,13 +1,10 @@
+import type { QuantityChangeHandler } from "@/types";
 import { ReviewLineItem } from "./ReviewLineItem";
 import type { ReviewGroupData } from "./types";
 
 type ReviewGroupProps = {
   group: ReviewGroupData;
-  onQuantityChange: (
-    productId: string,
-    variantId: string,
-    quantity: number,
-  ) => void;
+  onQuantityChange: QuantityChangeHandler;
 };
 
 export function ReviewGroup({ group, onQuantityChange }: ReviewGroupProps) {
