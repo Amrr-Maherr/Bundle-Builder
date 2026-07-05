@@ -22,7 +22,6 @@ export function ProductCardFooter({
     <div className="mt-auto flex items-center justify-between gap-4 pt-[10px] md:items-end">
       <QuantityStepper
         value={quantity}
-        min={1}
         max={maxQuantity}
         onChange={onQuantityChange}
       />

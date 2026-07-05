@@ -45,7 +45,6 @@ export function ReviewLineItem({ line, onQuantityChange }: ReviewLineItemProps) 
       <div className="flex items-center justify-center gap-[10px]">
         <QuantityStepper
           value={item.quantity}
-          min={1}
           max={product.maxQuantity}
           onChange={(quantity) =>
             onQuantityChange(item.productId, item.variantId, quantity)
