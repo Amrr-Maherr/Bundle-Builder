@@ -1,82 +1,68 @@
 # Bundle Builder
 
-An interactive product bundling application built with React and TypeScript. Users can select components, configure variants, and review their custom bundle before checkout.
-
-## Tech Stack
-
-- **React 19** with TypeScript
-- **Vite 8** for build tooling
-- **Tailwind CSS v4** with `@tailwindcss/vite` plugin
-- **shadcn/ui** (radix-nova style) with Radix UI primitives
-- **TanStack React Query** for server state (bundle, products, summary)
-- **json-server** as mock backend API
-- **react-hot-toast** for user feedback
+A multi-step security-system bundle builder with a live review panel. Built as a React + TypeScript prototype for a frontend take-home.
 
 ## Prerequisites
 
 - Node.js 18+
 - npm
 
-## Installation
+## Quick start (from a clean clone)
 
 ```bash
+git clone <repo-url>
+cd bundle_builder
 npm install
 ```
 
-## Run (development)
-
-Two terminals are required:
-
-**Terminal 1 — json-server (mock API on port 3001):**
+Start the mock API and the dev server in **two terminals**:
 
 ```bash
+# Terminal 1 — mock API (port 3001)
 npm run server
 ```
 
-**Terminal 2 — Vite dev server:**
-
 ```bash
+# Terminal 2 — frontend (port 5173)
 npm run dev
 ```
 
-Then open the URL shown in Terminal 2 (typically `http://localhost:5173`).
+Open `http://localhost:5173`. The app reads products, bundle state, and summary from `db.json` via json-server — **the API must be running** or the UI will fail to load data.
 
-## Build (production)
+## Production build
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## Folder Structure
+`npm run build` type-checks and outputs static assets to `dist/`. Preview serves the built app locally (the mock API is still required if you want live data).
+
+## Project structure
 
 ```
 src/
-├── components/
-│   ├── builder/          # Product selection, variant chips, quantity stepper
-│   ├── review/           # Order summary & review panel
-│   ├── shared/           # EmptyState, ErrorState
-│   ├── layout/           # BundleLayout, BuilderSection
-│   └── ui/               # shadcn/ui Accordion component
-├── hooks/
-│   ├── useProducts.ts    # React Query hook for product catalog
-│   └── useServerBundle.ts # React Query hook for bundle CRUD via API
-├── lib/
-│   ├── api.ts            # Fetch wrappers for json-server endpoints
-│   └── utils.ts          # cn() utility
-├── types/
-│   └── index.ts          # TypeScript types
-├── utils/
-│   └── index.ts          # Image map, formatPrice
-├── App.tsx
-├── App.css               # Tailwind import + CSS theme variables
-└── main.tsx
-db.json                   # json-server database (products, bundle, summary, submissions)
+├── components/builder/   # Accordion steps, product cards, variants, steppers
+├── components/review/    # Summary panel, totals, checkout/save actions
+├── components/layout/    # Two-column layout
+├── hooks/                # React Query hooks (products, bundle)
+├── lib/                  # API client, review helpers
+└── types/                # Shared TypeScript types
+db.json                   # Product catalog, initial bundle, summary groups
 ```
 
-## Tradeoffs
+## Decisions & tradeoffs
 
-- **json-server over localStorage**: Bundle state persists on the server and survives page reloads. Requires two terminals during development.
-- **React Query over manual state**: Server is the single source of truth for bundle contents; mutations update the query cache directly to avoid refetch flicker.
-- **No Redux**: Theme is static (light mode only). All other state lives in React Query or local component state.
-- **Derived state**: Totals, savings, and item counts are computed from the items array rather than stored separately, preventing sync bugs.
+**json-server instead of a static JSON import or localStorage alone.** The take-home allows a local JSON file; serving it through a small API felt like the right fit for this kind of task. It keeps the UI data-driven the way a production app would consume a backend, makes bundle mutations (`GET`/`PUT /bundle`) straightforward, and matches the spec’s optional “small backend” bonus without extra infrastructure. The tradeoff is two terminals during development.
+
+**React Query for server state.** Products and bundle state come from the API. Mutations update the query cache directly so the builder and review panel stay in sync without refetch flicker.
+
+**Derived totals.** Subtotal, savings, and monthly estimate are computed from line items rather than stored separately, which avoids sync bugs when quantities change.
+
+**Per-variant quantities.** Each color variant is a separate bundle line. The card stepper edits the active variant only; the review panel lists every variant with quantity > 0.
+
+**“Save my system for later”.** Saves a snapshot to `POST /submissions` (an archive in `db.json`) and shows a toast. Day-to-day bundle state is persisted through `PUT /bundle` on every change, so reload restores the current configuration while json-server is running.
+
+**Checkout.** Placeholder button only — no navigation, as the prototype focuses on the builder and review panel.
+
+**Not finished / known gaps.** Pixel-perfect Figma parity was not verified line-by-line. Chip selected-state styling follows a simple custom approach rather than a full design-token pass.

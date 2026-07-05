@@ -398,15 +398,9 @@
   ],
   "bundle": {
     "items": [],
-    "currentStep": 0
+    "currentStep": 1
   },
-  "submissions": [
-    {
-      "items": [],
-      "submittedAt": "2026-07-05T17:03:29.301Z",
-      "id": "aRSmNVyWSU4"
-    }
-  ],
+  "submissions": [],
   "summary": {
     "groups": [
       {
